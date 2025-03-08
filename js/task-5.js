@@ -1,5 +1,5 @@
 // Напиши скрипт, який змінює колір фону елемента <body> через інлайн-стиль
-//  по кліку на button.change-color і задає це значення кольору текстовим
+// по кліку на button.change-color і задає це значення кольору текстовим
 // вмістом для span.color.
 
 // Зверни увагу, що функція getRandomHexColor() повертає колір у hex-форматі,
@@ -11,3 +11,15 @@ function getRandomHexColor() {
     .toString(16)
     .padStart(6, 0)}`;
 }
+
+function handlerChangeColor() {
+  const getColor = getRandomHexColor();
+  spanColor.innerHTML = `-${getColor}`;
+  bodyColor.style.backgroundColor = getColor;
+}
+
+const bodyColor = document.querySelector("body");
+const spanColor = document.querySelector(".color");
+const btnChangeColor = document.querySelector(".change-color");
+
+btnChangeColor.addEventListener("click", handlerChangeColor);
