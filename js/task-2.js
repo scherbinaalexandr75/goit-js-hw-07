@@ -45,8 +45,8 @@ const galleryImage = images.map((imgItem) => {
   const img = document.createElement("img");
   img.src = imgItem.url;
   img.alt = imgItem.alt;
-  img.width = 412;
-  img.height = 256;
+  img.width = 360;
+  img.height = 300;
   classGallery.append(li);
   li.append(img);
   return img;
