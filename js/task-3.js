@@ -7,6 +7,7 @@
 const nameOutput = document.querySelector("#name-output");
 const inputField = document.querySelector("#name-input");
 
+
 inputField.addEventListener("input", (event) => {
   if (event.target.value.trim() !== "") {
     nameOutput.textContent = event.target.value;
