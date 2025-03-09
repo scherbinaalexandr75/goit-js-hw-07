@@ -18,8 +18,6 @@ const inputs = document.querySelectorAll("input");
 const btn = document.querySelector("button");
 const labels = document.querySelectorAll("label");
 
-
-
 labels[0].style.fontWeight = "400px";
 labels[0].style.fontSize = "16px";
 labels[0].style.lineHeight = "24px";
@@ -43,6 +41,7 @@ inputs[1].style.marginTop = "8px";
 
 btn.style.width = "86px";
 btn.style.height = "40px";
+btn.style.border = "none";
 btn.style.borderRadius = "8px";
 btn.style.fontWeight = "500px";
 btn.style.fontSize = "16px";
@@ -66,8 +65,6 @@ container.style.padding = "24px";
 container.style.width = "408px";
 container.style.height = "256px";
 container.style.borderRadius = "8px";
-
-
 
 formLogin.addEventListener("submit", formSubmit);
 

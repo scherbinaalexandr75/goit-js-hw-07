@@ -16,7 +16,6 @@ ul {
 .itm{
   width: 360px;
   height: 40px;
-   box-sizing: content-box;
    border-radius: 4px;
   border: 1px solid #808080; 
   
