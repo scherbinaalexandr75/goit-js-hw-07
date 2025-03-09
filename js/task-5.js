@@ -12,14 +12,57 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
+
+
 function handlerChangeColor() {
   const getColor = getRandomHexColor();
   spanColor.innerHTML = `-${getColor}`;
-  bodyColor.style.backgroundColor = getColor;
+  widget.style.backgroundColor = getColor;
 }
 
 const bodyColor = document.querySelector("body");
 const spanColor = document.querySelector(".color");
 const btnChangeColor = document.querySelector(".change-color");
+const widget = document.querySelector(".widget");
+const pTag = document.querySelector("p");
 
-btnChangeColor.addEventListener("click", handlerChangeColor);
+
+widget.style.display = "flex";
+widget.style.alineItems = "center";
+widget.style.justifyContent = "center";
+widget.style.flexDirection = "column";
+widget.style.gap = "10px";
+widget.style.paddingLeft = "88px";
+widget.style.width = "345px";
+widget.style.height = "280px";
+// widget.style.backgroundColor = "#fff";
+
+
+pTag.style.fontWeight = "400px";
+pTag.style.fontSize = "16px";
+pTag.style.lineHeight = "24px";
+pTag.style.letterSpacing = "0.04em";
+pTag.style.color = "#2e2f42";
+pTag.style.width = "169px";
+pTag.style.height = "24px";
+pTag.style.color = "#2e2f42";
+
+
+btnChangeColor.style.width = "148px";
+btnChangeColor.style.height = "40px";
+btnChangeColor.style.border = "none";
+btnChangeColor.style.borderRadius = "8px";
+btnChangeColor.style.backgroundColor = "#4e75ff";
+btnChangeColor.style.paddingTop = "8px";
+btnChangeColor.style.paddingBottom = "8px";
+btnChangeColor.style.paddingLeft = "16px";
+btnChangeColor.style.paddingRight = "16px";
+btnChangeColor.style.fontWeight = "500px";
+btnChangeColor.style.color = "#fff";
+btnChangeColor.style.fontSize = "16px";
+btnChangeColor.style.lineHeight = "24px";
+btnChangeColor.style.letterSpacing = "0.04em";
+
+  
+
+  btnChangeColor.addEventListener("click",handlerChangeColor);
