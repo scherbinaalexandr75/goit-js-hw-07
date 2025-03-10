@@ -12,12 +12,10 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
-
-
 function handlerChangeColor() {
   const getColor = getRandomHexColor();
   spanColor.innerHTML = `-${getColor}`;
-  widget.style.backgroundColor = getColor;
+  document.body.style.backgroundColor = getColor;
 }
 
 const bodyColor = document.querySelector("body");
@@ -25,7 +23,6 @@ const spanColor = document.querySelector(".color");
 const btnChangeColor = document.querySelector(".change-color");
 const widget = document.querySelector(".widget");
 const pTag = document.querySelector("p");
-
 
 widget.style.display = "flex";
 widget.style.alineItems = "center";
@@ -37,7 +34,6 @@ widget.style.width = "345px";
 widget.style.height = "280px";
 // widget.style.backgroundColor = "#fff";
 
-
 pTag.style.fontWeight = "400px";
 pTag.style.fontSize = "16px";
 pTag.style.lineHeight = "24px";
@@ -46,7 +42,6 @@ pTag.style.color = "#2e2f42";
 pTag.style.width = "169px";
 pTag.style.height = "24px";
 pTag.style.color = "#2e2f42";
-
 
 btnChangeColor.style.width = "148px";
 btnChangeColor.style.height = "40px";
@@ -63,6 +58,4 @@ btnChangeColor.style.fontSize = "16px";
 btnChangeColor.style.lineHeight = "24px";
 btnChangeColor.style.letterSpacing = "0.04em";
 
-  
-
-  btnChangeColor.addEventListener("click",handlerChangeColor);
+btnChangeColor.addEventListener("click", handlerChangeColor);

@@ -39,18 +39,10 @@ const images = [
 
 const classGallery = document.querySelector(".gallery");
 const galleryImage = images.map((imgItem) => {
-  const li = document.createElement("li");
-  li.classList.add("class-img");
-
-  const img = document.createElement("img");
-  img.src = imgItem.url;
-  img.alt = imgItem.alt;
-  img.width = 360;
-  img.height = 300;
-  classGallery.append(li);
-  li.append(img);
-  return img;
+  classGallery.insertAdjacentHTML(
+    `beforeend`,
+    `<li><img src="${imgItem.url}" alt = "${imgItem.alt}" width = "360px" height = "300px"/></li>`
+  );
 });
 
 console.log(classGallery);
-console.log(galleryImage);
