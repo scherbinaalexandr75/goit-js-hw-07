@@ -38,11 +38,14 @@ const images = [
 ];
 
 const classGallery = document.querySelector(".gallery");
-const galleryImage = images.map((imgItem) => {
-  classGallery.insertAdjacentHTML(
-    `beforeend`,
-    `<li><img src="${imgItem.url}" alt = "${imgItem.alt}" width = "360px" height = "300px"/></li>`
-  );
-});
 
-console.log(classGallery);
+const newImages = (images) => {
+  const imgItems = images.map(
+    (img) =>
+      `<li class="items"><img class="pictures" src="${img.url}" alt="${img.alt}" width = "360px" height = "300px" /></li>`
+  );
+
+  classGallery.insertAdjacentHTML("afterbegin", imgItems.join(""));
+};
+
+newImages(images);

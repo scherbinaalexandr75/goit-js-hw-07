@@ -14,7 +14,7 @@ function getRandomHexColor() {
 
 function handlerChangeColor() {
   const getColor = getRandomHexColor();
-  spanColor.innerHTML = `-${getColor}`;
+  spanColor.innerHTML = getColor;
   document.body.style.backgroundColor = getColor;
 }
 
